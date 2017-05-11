@@ -1,5 +1,7 @@
 .welcome {
   min-height: 813px;
+  background-image: url(../img/bg-mountain.jpg);
+  background-repeat: no-repeat;
 }
 
 .welcome__wrapper {
@@ -12,6 +14,7 @@
 }
 
 .welcome__title {
+  position: relative;
   margin-top: 215px;
   margin-bottom: 138px;
   width: 750px;
@@ -21,6 +24,31 @@
   color: @font1;
   text-align: center;
   letter-spacing: 2.5px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 191px;
+    left: 346px;
+    width: 59px;
+    height: 59px;
+    border-radius: 50%;
+    background-color: #8084a2;
+    cursor: pointer;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 211px;
+    left: 369px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 9.5px 0 9.5px 17px;
+    border-color: transparent transparent transparent #f5f6f8;
+    cursor: pointer;
+  }
 }
 
 .welcome__btn {
@@ -33,6 +61,15 @@
   letter-spacing: 3px;
   text-align: center;
   vertical-align: middle;
+
+  &:hover {
+    width: 184px;
+    height: 34px;
+    padding-top: 10px;
+    border: 3px @pink solid;
+    color: @pink;
+    background-color: transparent;
+  }
 }
 
 .welcome__caption {

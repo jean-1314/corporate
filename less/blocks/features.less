@@ -1,5 +1,8 @@
 .features {
   min-height: 675px;
+  background-image: url(../img/bg-table.jpg);
+  background-repeat: no-repeat;
+  background-position-y: -32px;
 }
 
 .features__wrapper {
@@ -26,12 +29,37 @@
 }
 
 .features__item {
+  position: relative;
   width: 360px;
 
   &:nth-child(2) {
     margin-left: 28px;
     margin-right: 28px;
   }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 67px;
+    height: 67px;
+    top: -62px;
+    left: 145px;
+  }
+}
+
+.features__item:first-child::before {
+  background-image: url(../img/photo-icon.png);
+  background-repeat: no-repeat;
+}
+
+.features__item:nth-child(2)::before {
+  background-image: url(../img/plane-icon.png);
+  background-repeat: no-repeat;
+}
+
+.features__item:last-child::before {
+  background-image: url(../img/bulb-icon.png);
+  background-repeat: no-repeat;
 }
 
 .features__item-header {

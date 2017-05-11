@@ -21,19 +21,29 @@
 }
 
 .form__offer {
+  position: relative;
   align-self: flex-end;
   margin-top: 33px;
-  margin-bottom: 11px;
+  margin-bottom: 38px;
   padding-right: 30px;
   font-size: 16px;
   color: @white;
   letter-spacing: 0.7px;
+
+  &::before {
+    .sprite();
+    top: 2px;
+    left: -32px;
+    width: 18px;
+    height: 41px;
+    background-position: -5px -5px;
+  }
 }
 
 .form__signup {
   display: flex;
   justify-content: flex-start;
-  align-items: flex-end;
+  align-items: flex-start;
   width: 100%;
   border: 0;
   margin: 0;
@@ -41,10 +51,11 @@
 }
 
 .form__signup-item {
+  position: relative;
   margin-right: 30px;
 }
 
-.form__signup-item__input {
+.form__signup-item-input {
   width: 263px;
   height: 49px;
   padding: 0 0 0 28px;
@@ -62,19 +73,58 @@
   }
 }
 
-.form__signup-item__label {
+.form__signup-item-label {
   font-size: 0;
+  width: 0;
+  height: 0;
+}
+
+.form__signup-item-label::before {
+  position: absolute;
+  top: 15px;
+  left: 28px;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: @white;
+  cursor: text;
+}
+
+.form__signup-item--name .form__signup-item-label::before {
+  content: "Full name";
+}
+
+.form__signup-item--email .form__signup-item-label::before {
+  content: "Your email";
+}
+
+.form__signup-item--password .form__signup-item-label::before {
+  content: "Password";
+}
+
+.form__signup-item-input:focus + .form__signup-item-label::before {
+  display: none;
 }
 
 .form__signup-submit-btn {
   width: 261px;
   height: 49px;
+  padding: 0;
   border-radius: 3px;
+  font-size: 16px;
   cursor: pointer;
+
+  &:hover {
+    border: 3px solid @pink;
+    background-color: transparent;
+  }
+
+  &:focus {
+    outline: 2px solid @white;
+  }
 }
 
 .form__warning {
-  margin-top: 47px;
+  margin-top: 20px;
   font-size: 16px;
   color: @font2;
   letter-spacing: 0.7px;

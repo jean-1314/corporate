@@ -1,6 +1,8 @@
 .staff {
   min-height: 648px;
   background-color: @bg-grey1;
+  background-image: url(../img/bg-rects.jpg);
+  background-repeat: no-repeat;
 }
 
 .staff__wrapper {
@@ -19,6 +21,12 @@
   flex-direction: column;
   align-items: center;
   width: 360px;
+}
+
+.staff__item-img {
+  width: 76px;
+  height: 76px;
+  background-color: @photo-img;
 }
 
 .staff__name {
@@ -49,8 +57,63 @@
 .staff__company {
   display: flex;
   justify-content: space-around;
+  align-items: center;
   width: 100%;
   margin-top: 70px;
+}
+
+.staff__company-link {
+  display: block;
+
+  &--hits {
+    width: 130px;
+    height: 65px;
+    background-image: url(../img/partner-logo-1-grey.png);
+
+    &:hover {
+      background-image: url(../img/partner-logo-1.png);
+    }
+  }
+
+  &--rvlvr {
+    width: 110px;
+    height: 56px;
+    background-image: url(../img/partner-logo-2-grey.png);
+
+    &:hover {
+      background-image: url(../img/partner-logo-2-white.png);
+    }
+  }
+
+  &--eatfindr {
+    width: 98px;
+    height: 85px;
+    background-image: url(../img/partner-logo-3-grey.png);
+
+    &:hover {
+      background-image: url(../img/partner-logo-3-white.png);
+    }
+  }
+
+  &--igor {
+    width: 95px;
+    height: 61px;
+    background-image: url(../img/partner-logo-4-grey.png);
+
+    &:hover {
+      background-image: url(../img/partner-logo-4-white.png);
+    }
+  }
+
+  &--sienna {
+    width: 120px;
+    height: 54px;
+    background-image: url(../img/partner-logo-5-grey.png);
+
+    &:hover {
+      background-image: url(../img/partner-logo-5-white.png);
+    }
+  }
 }
 
 
