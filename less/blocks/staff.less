@@ -1,3 +1,56 @@
+.staff {
+  min-height: 648px;
+  background-color: @bg-grey1;
+}
+
 .staff__wrapper {
   .wrapper();
+  min-height: inherit;
 }
+
+.staff__person {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 110px;
+}
+
+.staff__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 360px;
+}
+
+.staff__name {
+  margin-top: 20px;
+  font-size: 22px;
+  color: @white;
+  font-weight: 500;
+}
+
+.staff__position {
+  margin-top: 7px;
+  font-size: 16px;
+  color: @pink;
+  font-weight: 500;
+}
+
+.staff__quote {
+  display: block;
+  width: inherit;
+  margin: 25px 0 0 0;
+  font-size: 16px;
+  line-height: 26px;
+  color: @white;
+  font-style: italic;
+  text-align: center;
+}
+
+.staff__company {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin-top: 70px;
+}
+
+
